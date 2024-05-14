@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #77d6ee;
+  color: #191e27;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.background {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
+  position: relative;
+  background-color: #1d1b33;
+  border: 0.4rem solid #198835;;
+  cursor: pointer;
+}
+
+.tiles {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: goldenrod;
+  font-size: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.right-border {
+  border-right: 0.1rem solid #198835;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-border {
+  border-bottom: 0.1rem solid #198835;
+}
+
+.line {
+  position: absolute;
+  background-color: aquamarine;
+}
+
+.line-row-1 {
+  width: 100%;
+  height: 6px;
+  top: 15%;
+}
+
+.line-row-2 {
+  width: 100%;
+  height: 6px;
+  top: 48%;
+}
+
+.line-row-3 {
+  width: 100%;
+  height: 6px;
+  top: 83%;
+}
+
+.line-col-1 {
+  height: 100%;
+  width: 6px;
+  left: 15%;
+}
+
+.line-col-2 {
+  height: 100%;
+  width: 6px;
+  left: 48%;
+}
+
+.line-col-3 {
+  height: 100%;
+  width: 6px;
+  left: 83%;
+}
+
+.line-diag-1 {
+  width: 90%;
+  height: 6px;
+  transform: skewY(45deg);
+  top: 50%;
+  left: 6%;
+}
+
+.line-diag-2 {
+  width: 90%;
+  height: 6px;
+  transform: skewY(-45deg);
+  top: 50%;
+  left: 3%;
+}
+
+.winner {
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: #1d1b33;
+  color: goldenrod;
+  border: 8px solid #198835;
+}
+
+.reset-btn {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #1d1b33;
+  color: #198835;
+  font-size: 1.5rem;
+  border: 5px solid #198835;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #198835;
+  color: #1d1b33;
 }
